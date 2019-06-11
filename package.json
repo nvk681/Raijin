@@ -1,0 +1,23 @@
+{
+  "name": "raijin",
+  "version": "1.0.0",
+  "description": "A package that creates index for the tables or collections in your database, based on the queries you run through your application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nvk681/Raijin.git"
+  },
+  "keywords": [
+    "Index",
+    "auto-index"
+  ],
+  "author": "N.V.K.Chaitanya, Vedant Vohra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nvk681/Raijin/issues"
+  },
+  "homepage": "https://github.com/nvk681/Raijin#readme"
+}
