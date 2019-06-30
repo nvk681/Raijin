@@ -11,18 +11,30 @@ var connectionHelper = {
     }
     */
     validateMysqlConnection: function(mysqlConnectionDetails) {
+        if (!mysqlConnectionDetails) {
+            throw new Error('empty mysqlConnectionDetails are passed to validateMysqlConnection function');
+        }
         if (mysqlConnectionDetails["connectionName"]) {
-            let mysql;
+            let mysqlConnectionName = mysqlConnectionDetails["connectionName"];
+            let mysqlConnectionDetailsFromConfig = config.mysql.connections;
         } else {
 
         }
 
     },
+    getDefaultMysqlConnection: function() {
+        return "apple"
+    },
     connectToSql: function(connectionDetails = null) {
         if (connectionDetails) {
-            validateMysqlConnection();
+            try {
+                this.validateMysqlConnection(connectionDetails);
+            } catch (error) {
+                console.log(error);
+            }
+
         } else {
-            getDefaultMysqlConnection();
+            this.getDefaultMysqlConnection();
         }
     }
 

@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/nvk681/Raijin/issues"
   },
-  "homepage": "https://github.com/nvk681/Raijin#readme"
+  "homepage": "https://github.com/nvk681/Raijin#readme",
+  "dependencies": {
+    "dotenv": "^8.0.0"
+  }
 }
