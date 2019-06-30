@@ -12,15 +12,22 @@ var connectionHelper = {
     */
     validateMysqlConnection: function(mysqlConnectionDetails) {
         if (!mysqlConnectionDetails) {
-            throw new Error('empty mysqlConnectionDetails are passed to validateMysqlConnection function');
+            throw new Error('Empty mysqlConnectionDetails are passed to validateMysqlConnection function');
         }
         if (mysqlConnectionDetails["connectionName"]) {
             let mysqlConnectionName = mysqlConnectionDetails["connectionName"];
-            let mysqlConnectionDetailsFromConfig = config.mysql.connections;
-        } else {
-
+            let mysqlConnectionDetailsFromConfig = null;
+            if (!config.mysql) {
+                throw new Error("No mysql connection details found in config file");
+            }
+            if (config.mysql.connections) {
+                if (config.mysql.connections[mysqlConnectionName]) {
+                    mysqlConnectionDetailsFromConfig = config.mysql.connections[mysqlConnectionName];
+                } else {
+                    mysqlConnectionDetailsFromConfig = config.mysql.connections.default;
+                }
+            }
         }
-
     },
     getDefaultMysqlConnection: function() {
         return "apple"
