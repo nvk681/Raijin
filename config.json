@@ -1,0 +1,36 @@
+{
+    "mysql": {
+        "raijin": {
+            "host": "localhost",
+            "database": "raijin",
+            "user": "root",
+            "password": "root",
+            "port": "3306"
+        },
+        "connections": {
+            "default": {
+                "host": "localhost",
+                "database": "raijin",
+                "user": "root",
+                "password": "root",
+                "port": "3306"
+            },
+            "staging": {},
+            "production": {}
+        }
+    },
+    "mongo": {
+        "raijin": {
+            "host": "localhost",
+            "database": "raijin",
+            "user": "",
+            "password": "",
+            "port": "27017"
+        },
+        "connections": {
+            "default": {},
+            "staging": {},
+            "production": {}
+        }
+    }
+}
