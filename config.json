@@ -16,7 +16,13 @@
                 "port": "3306"
             },
             "development": {
-                "connection-1": {},
+                "connection-1": {
+                    "host": "localhost",
+                    "database": "raijin",
+                    "user": "root",
+                    "password": "root",
+                    "port": "3306"
+                },
                 "connection-2": {}
             },
             "staging": {},
